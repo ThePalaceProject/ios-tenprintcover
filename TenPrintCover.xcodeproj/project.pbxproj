@@ -7,41 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCAC4FB2195B3DD700D775F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAC4FB1195B3DD700D775F5 /* Foundation.framework */; };
-		CCAC4FB4195B3DD700D775F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAC4FB3195B3DD700D775F5 /* CoreGraphics.framework */; };
-		CCAC4FB6195B3DD700D775F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAC4FB5195B3DD700D775F5 /* UIKit.framework */; };
-		CCAC4FBC195B3DD700D775F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCAC4FBA195B3DD700D775F5 /* InfoPlist.strings */; };
-		CCAC4FBE195B3DD700D775F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC4FBD195B3DD700D775F5 /* main.m */; };
-		CCAC4FC2195B3DD700D775F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC4FC1195B3DD700D775F5 /* AppDelegate.m */; };
-		CCAC4FEB195B3EAC00D775F5 /* TenPrintCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC4FEA195B3EAC00D775F5 /* TenPrintCoverView.m */; };
-		CCAC5028195DBF3B00D775F5 /* covers.json2 in Resources */ = {isa = PBXBuildFile; fileRef = CCAC5027195DBF3B00D775F5 /* covers.json2 */; };
+		1112A83D1A324808002B8CC1 /* TenPrintCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC4FEA195B3EAC00D775F5 /* TenPrintCoverView.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1112A8241A3247D2002B8CC1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CCAC4FAE195B3DD700D775F5 /* TenPrintCover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenPrintCover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTenPrintCover.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAC4FB1195B3DD700D775F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCAC4FB3195B3DD700D775F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CCAC4FB5195B3DD700D775F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CCAC4FB9195B3DD700D775F5 /* TenPrintCover-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TenPrintCover-Info.plist"; sourceTree = "<group>"; };
-		CCAC4FBB195B3DD700D775F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CCAC4FBD195B3DD700D775F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CCAC4FBF195B3DD700D775F5 /* TenPrintCover-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TenPrintCover-Prefix.pch"; sourceTree = "<group>"; };
-		CCAC4FC0195B3DD700D775F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CCAC4FC1195B3DD700D775F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CCAC4FD3195B3DD700D775F5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CCAC4FE9195B3EAC00D775F5 /* TenPrintCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenPrintCoverView.h; sourceTree = "<group>"; };
 		CCAC4FEA195B3EAC00D775F5 /* TenPrintCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenPrintCoverView.m; sourceTree = "<group>"; };
-		CCAC5027195DBF3B00D775F5 /* covers.json2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = covers.json2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CCAC4FAB195B3DD700D775F5 /* Frameworks */ = {
+		1112A8231A3247D2002B8CC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCAC4FB4195B3DD700D775F5 /* CoreGraphics.framework in Frameworks */,
-				CCAC4FB6195B3DD700D775F5 /* UIKit.framework in Frameworks */,
-				CCAC4FB2195B3DD700D775F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +55,7 @@
 		CCAC4FAF195B3DD700D775F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCAC4FAE195B3DD700D775F5 /* TenPrintCover.app */,
+				1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,37 +74,22 @@
 		CCAC4FB7195B3DD700D775F5 /* TenPrintCover */ = {
 			isa = PBXGroup;
 			children = (
-				CCAC4FC0195B3DD700D775F5 /* AppDelegate.h */,
-				CCAC4FC1195B3DD700D775F5 /* AppDelegate.m */,
 				CCAC4FE9195B3EAC00D775F5 /* TenPrintCoverView.h */,
 				CCAC4FEA195B3EAC00D775F5 /* TenPrintCoverView.m */,
-				CCAC5027195DBF3B00D775F5 /* covers.json2 */,
-				CCAC4FB8195B3DD700D775F5 /* Supporting Files */,
 			);
 			path = TenPrintCover;
-			sourceTree = "<group>";
-		};
-		CCAC4FB8195B3DD700D775F5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CCAC4FB9195B3DD700D775F5 /* TenPrintCover-Info.plist */,
-				CCAC4FBA195B3DD700D775F5 /* InfoPlist.strings */,
-				CCAC4FBD195B3DD700D775F5 /* main.m */,
-				CCAC4FBF195B3DD700D775F5 /* TenPrintCover-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCAC4FAD195B3DD700D775F5 /* TenPrintCover */ = {
+		1112A8251A3247D2002B8CC1 /* TenPrintCover */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCAC4FE3195B3DD700D775F5 /* Build configuration list for PBXNativeTarget "TenPrintCover" */;
+			buildConfigurationList = 1112A8371A3247D2002B8CC1 /* Build configuration list for PBXNativeTarget "TenPrintCover" */;
 			buildPhases = (
-				CCAC4FAA195B3DD700D775F5 /* Sources */,
-				CCAC4FAB195B3DD700D775F5 /* Frameworks */,
-				CCAC4FAC195B3DD700D775F5 /* Resources */,
+				1112A8221A3247D2002B8CC1 /* Sources */,
+				1112A8231A3247D2002B8CC1 /* Frameworks */,
+				1112A8241A3247D2002B8CC1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -117,8 +97,8 @@
 			);
 			name = TenPrintCover;
 			productName = TenPrintCover;
-			productReference = CCAC4FAE195B3DD700D775F5 /* TenPrintCover.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -128,6 +108,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = NYPL_Labs;
+				TargetAttributes = {
+					1112A8251A3247D2002B8CC1 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
 			};
 			buildConfigurationList = CCAC4FA9195B3DD700D775F5 /* Build configuration list for PBXProject "TenPrintCover" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -142,48 +127,53 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCAC4FAD195B3DD700D775F5 /* TenPrintCover */,
+				1112A8251A3247D2002B8CC1 /* TenPrintCover */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		CCAC4FAC195B3DD700D775F5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CCAC5028195DBF3B00D775F5 /* covers.json2 in Resources */,
-				CCAC4FBC195B3DD700D775F5 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		CCAC4FAA195B3DD700D775F5 /* Sources */ = {
+		1112A8221A3247D2002B8CC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCAC4FEB195B3EAC00D775F5 /* TenPrintCoverView.m in Sources */,
-				CCAC4FC2195B3DD700D775F5 /* AppDelegate.m in Sources */,
-				CCAC4FBE195B3DD700D775F5 /* main.m in Sources */,
+				1112A83D1A324808002B8CC1 /* TenPrintCoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		CCAC4FBA195B3DD700D775F5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAC4FBB195B3DD700D775F5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		1112A8381A3247D2002B8CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1112A8391A3247D2002B8CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CCAC4FE1195B3DD700D775F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -256,49 +246,22 @@
 			};
 			name = Release;
 		};
-		CCAC4FE4195B3DD700D775F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TenPrintCover/TenPrintCover-Prefix.pch";
-				INFOPLIST_FILE = "TenPrintCover/TenPrintCover-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		CCAC4FE5195B3DD700D775F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TenPrintCover/TenPrintCover-Prefix.pch";
-				INFOPLIST_FILE = "TenPrintCover/TenPrintCover-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1112A8371A3247D2002B8CC1 /* Build configuration list for PBXNativeTarget "TenPrintCover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1112A8381A3247D2002B8CC1 /* Debug */,
+				1112A8391A3247D2002B8CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CCAC4FA9195B3DD700D775F5 /* Build configuration list for PBXProject "TenPrintCover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCAC4FE1195B3DD700D775F5 /* Debug */,
 				CCAC4FE2195B3DD700D775F5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CCAC4FE3195B3DD700D775F5 /* Build configuration list for PBXNativeTarget "TenPrintCover" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CCAC4FE4195B3DD700D775F5 /* Debug */,
-				CCAC4FE5195B3DD700D775F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
