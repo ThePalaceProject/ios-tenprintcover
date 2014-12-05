@@ -9,7 +9,7 @@
 @import CoreText;
 @import UIKit;
 
-@interface TenPrintCoverView : UIView
+@interface NYPLTenPrintCoverView : UIView
 
 -(id)initWithFrame:(CGRect)frame withTitle:(NSString *)title withAuthor:(NSString *)author withScale:(float)scale;
 -(void)saveToDisk;

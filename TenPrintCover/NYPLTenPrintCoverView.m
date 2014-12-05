@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 NYPL_Labs. All rights reserved.
 //
 
-#import "TenPrintCoverView.h"
+#import "NYPLTenPrintCoverView.h"
 
-@implementation TenPrintCoverView
+@implementation NYPLTenPrintCoverView
 
 @synthesize bookAuthor;
 @synthesize bookTitle;
