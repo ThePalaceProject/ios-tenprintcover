@@ -20,7 +20,7 @@
 
 float baseSaturation = 0.9;
 float baseBrightness = 0.8;
-float fontSize = 14.0;
+float fontSize = 18.0;
 float baseThickness = 4.0;
 
 int gridCount = 7;
