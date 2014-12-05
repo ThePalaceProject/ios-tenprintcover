@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 NYPL_Labs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreText/CoreText.h>
+@import CoreText;
+@import UIKit;
 
 @interface TenPrintCoverView : UIView
 
