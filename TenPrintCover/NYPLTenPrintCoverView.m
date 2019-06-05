@@ -69,7 +69,7 @@ NSString *c64Letters = @" qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1
 -(void)processColors {
 	int counts = (int)self.bookTitle.length + (int)self.bookAuthor.length;
 	float colorSeed = ofMap(counts, 2.0, 80.0, 0.0, 1.0, NO);
-	self.shapeColor = [UIColor colorWithHue:colorSeed saturation:baseSaturation brightness:((baseBrightness*100)-(counts%20))*.1 alpha:1.0];
+	self.shapeColor = [UIColor colorWithHue:colorSeed saturation:baseSaturation brightness:((baseBrightness*100)-(counts%20))*.01 alpha:1.0];
 	float complementary = colorSeed+0.5;
 	if (complementary > 1) complementary -= 1;
 	self.baseColor = [UIColor colorWithHue:complementary saturation:baseSaturation brightness:baseBrightness alpha:1.0];
