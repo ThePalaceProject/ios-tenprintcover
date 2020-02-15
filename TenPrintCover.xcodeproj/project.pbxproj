@@ -116,7 +116,7 @@
 			};
 			buildConfigurationList = CCAC4FA9195B3DD700D775F5 /* Build configuration list for PBXProject "TenPrintCover" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
