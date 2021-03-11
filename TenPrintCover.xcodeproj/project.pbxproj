@@ -8,7 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1112A83D1A324808002B8CC1 /* NYPLTenPrintCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC4FEA195B3EAC00D775F5 /* NYPLTenPrintCoverView.m */; };
+		590D9CA925FA8D3500E927FA /* C64Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 590D9CA825FA8D3500E927FA /* C64Converter.m */; };
+		59D9CBFA25FFDBC500C89B81 /* libTenPrintCover.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */; };
+		59D9CC0225FFDBD700C89B81 /* C64ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D9CC0125FFDBD700C89B81 /* C64ConversionTests.swift */; };
+		59D9CC0325FFDBEE00C89B81 /* C64Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 590D9CA825FA8D3500E927FA /* C64Converter.m */; };
+		59D9CC0F25FFDD1900C89B81 /* SpecialChars.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59D9CC0E25FFDD1900C89B81 /* SpecialChars.txt */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59D9CBFB25FFDBC500C89B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCAC4FA6195B3DD700D775F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1112A8251A3247D2002B8CC1;
+			remoteInfo = TenPrintCover;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1112A8241A3247D2002B8CC1 /* CopyFiles */ = {
@@ -24,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTenPrintCover.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		590D9CA825FA8D3500E927FA /* C64Converter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C64Converter.m; sourceTree = "<group>"; };
+		590D9CAA25FA8D4400E927FA /* C64Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C64Converter.h; sourceTree = "<group>"; };
+		59D9CBF525FFDBC500C89B81 /* TenPrintCoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TenPrintCoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D9CBF925FFDBC500C89B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59D9CC0025FFDBD600C89B81 /* TenPrintCoverTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TenPrintCoverTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		59D9CC0125FFDBD700C89B81 /* C64ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C64ConversionTests.swift; sourceTree = "<group>"; };
+		59D9CC0E25FFDD1900C89B81 /* SpecialChars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpecialChars.txt; sourceTree = "<group>"; };
 		CCAC4FB1195B3DD700D775F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCAC4FB3195B3DD700D775F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CCAC4FB5195B3DD700D775F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -40,13 +62,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59D9CBF225FFDBC500C89B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D9CBFA25FFDBC500C89B81 /* libTenPrintCover.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59D9CBF625FFDBC500C89B81 /* TenPrintCoverTests */ = {
+			isa = PBXGroup;
+			children = (
+				59D9CC1025FFDE0000C89B81 /* SupportingFiles */,
+				59D9CBF925FFDBC500C89B81 /* Info.plist */,
+				59D9CC0125FFDBD700C89B81 /* C64ConversionTests.swift */,
+				59D9CC0025FFDBD600C89B81 /* TenPrintCoverTests-Bridging-Header.h */,
+			);
+			path = TenPrintCoverTests;
+			sourceTree = "<group>";
+		};
+		59D9CC1025FFDE0000C89B81 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				59D9CC0E25FFDD1900C89B81 /* SpecialChars.txt */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		CCAC4FA5195B3DD700D775F5 = {
 			isa = PBXGroup;
 			children = (
 				CCAC4FB7195B3DD700D775F5 /* TenPrintCover */,
+				59D9CBF625FFDBC500C89B81 /* TenPrintCoverTests */,
 				CCAC4FB0195B3DD700D775F5 /* Frameworks */,
 				CCAC4FAF195B3DD700D775F5 /* Products */,
 			);
@@ -56,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */,
+				59D9CBF525FFDBC500C89B81 /* TenPrintCoverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +127,8 @@
 			children = (
 				CCAC4FE9195B3EAC00D775F5 /* NYPLTenPrintCoverView.h */,
 				CCAC4FEA195B3EAC00D775F5 /* NYPLTenPrintCoverView.m */,
+				590D9CAA25FA8D4400E927FA /* C64Converter.h */,
+				590D9CA825FA8D3500E927FA /* C64Converter.m */,
 			);
 			path = TenPrintCover;
 			sourceTree = "<group>";
@@ -100,6 +153,24 @@
 			productReference = 1112A8261A3247D2002B8CC1 /* libTenPrintCover.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		59D9CBF425FFDBC500C89B81 /* TenPrintCoverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59D9CBFF25FFDBC500C89B81 /* Build configuration list for PBXNativeTarget "TenPrintCoverTests" */;
+			buildPhases = (
+				59D9CBF125FFDBC500C89B81 /* Sources */,
+				59D9CBF225FFDBC500C89B81 /* Frameworks */,
+				59D9CBF325FFDBC500C89B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59D9CBFC25FFDBC500C89B81 /* PBXTargetDependency */,
+			);
+			name = TenPrintCoverTests;
+			productName = TenPrintCoverTests;
+			productReference = 59D9CBF525FFDBC500C89B81 /* TenPrintCoverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +182,12 @@
 				TargetAttributes = {
 					1112A8251A3247D2002B8CC1 = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					59D9CBF425FFDBC500C89B81 = {
+						CreatedOnToolsVersion = 11.7;
+						DevelopmentTeam = UE52HE9BWK;
+						LastSwiftMigration = 1170;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -128,20 +205,50 @@
 			projectRoot = "";
 			targets = (
 				1112A8251A3247D2002B8CC1 /* TenPrintCover */,
+				59D9CBF425FFDBC500C89B81 /* TenPrintCoverTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59D9CBF325FFDBC500C89B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D9CC0F25FFDD1900C89B81 /* SpecialChars.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1112A8221A3247D2002B8CC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				590D9CA925FA8D3500E927FA /* C64Converter.m in Sources */,
 				1112A83D1A324808002B8CC1 /* NYPLTenPrintCoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59D9CBF125FFDBC500C89B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D9CC0325FFDBEE00C89B81 /* C64Converter.m in Sources */,
+				59D9CC0225FFDBD700C89B81 /* C64ConversionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59D9CBFC25FFDBC500C89B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1112A8251A3247D2002B8CC1 /* TenPrintCover */;
+			targetProxy = 59D9CBFB25FFDBC500C89B81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1112A8381A3247D2002B8CC1 /* Debug */ = {
@@ -171,6 +278,62 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		59D9CBFD25FFDBC500C89B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UE52HE9BWK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TenPrintCoverTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.singh4282.TenPrintCoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TenPrintCoverTests/TenPrintCoverTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59D9CBFE25FFDBC500C89B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UE52HE9BWK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TenPrintCoverTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.singh4282.TenPrintCoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TenPrintCoverTests/TenPrintCoverTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -281,6 +444,15 @@
 			buildConfigurations = (
 				1112A8381A3247D2002B8CC1 /* Debug */,
 				1112A8391A3247D2002B8CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59D9CBFF25FFDBC500C89B81 /* Build configuration list for PBXNativeTarget "TenPrintCoverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59D9CBFD25FFDBC500C89B81 /* Debug */,
+				59D9CBFE25FFDBC500C89B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
