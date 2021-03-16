@@ -7,6 +7,7 @@
 //
 
 #import "NYPLTenPrintCoverView.h"
+#import "C64Converter.h"
 
 @implementation NYPLTenPrintCoverView
 
@@ -31,8 +32,6 @@ int artworkStartX = 0;
 int artworkStartY = 75;
 int titleHeight = 80;
 int authorHeight = 25;
-
-NSString *c64Letters = @" qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890.";
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -449,29 +448,7 @@ float ofMap(float value, float inputMin, float inputMax, float outputMin, float 
 
 -(NSString *)c64Convert {
 	// returns a string with all the c64-letter available in the title or a random set if none
-	int i, len = (int)self.bookTitle.length;
-	NSMutableString *result = [NSMutableString stringWithCapacity:len];
-	char letter;
-	for (i=0; i<len; i++) {
-		letter = [self.bookTitle characterAtIndex:i];
-		NSRange range = [self indexOf:letter inString:c64Letters];
-		//		NSLog(@"letter: %c num: %d range: %d", letter, (int)letter, range.length);
-		if (range.length == 0) {
-			int anIndex = (int)(letter%c64Letters.length);
-			letter = [c64Letters characterAtIndex:anIndex];
-		}
-		[result appendString:[NSString stringWithFormat:@"%c", letter]];
-	}
-	//	NSLog(@"result: %@", result);
-	return [NSString stringWithString:result];
-}
-
--(NSRange) indexOf:(char) searchChar inString:(NSString *)string {
-	NSRange searchRange;
-	searchRange.location=(unsigned int)searchChar;
-	searchRange.length=1;
-	NSRange foundRange = [string rangeOfCharacterFromSet:[NSCharacterSet characterSetWithRange:searchRange]];
-	return foundRange;
+    return [C64Converter convert:self.bookTitle];
 }
 
 -(void)breakGrid {
