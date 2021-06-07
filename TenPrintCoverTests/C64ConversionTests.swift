@@ -38,7 +38,7 @@ class C64ConversionTests: XCTestCase {
     for i in 0..<books.count {
       let stringToConvert = books[i]
       let expected = converted[i]
-        let result = C64Converter.convert(stringToConvert)
+      let result = C64Converter.convert(stringToConvert)
       XCTAssertEqual(expected, result)
     }
   }
@@ -74,5 +74,9 @@ class C64ConversionTests: XCTestCase {
     XCTAssertEqual(expected, result)
   }
 
+  func testC64ConversionForEmptyString() {
+    let result = C64Converter.convert("")
+    XCTAssertGreaterThan(result.count, 0)
+  }
 }
 
