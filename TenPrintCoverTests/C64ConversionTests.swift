@@ -11,17 +11,13 @@ import XCTest
 class C64ConversionTests: XCTestCase {
     
   func testC64ConverionWithEmptyString() {
-    let stringToConvert = ""
-    let expected = ""
-    let result = C64Converter.convert(stringToConvert)
-    XCTAssertEqual(expected, result)
+    let result = C64Converter.convert("")
+    XCTAssertGreaterThan(result.count, 0)
   }
     
   func testC64ConverionWithNilString() {
-    let stringToConvert: String? = nil
-    let expected = ""
-    let result = C64Converter.convert(stringToConvert)
-    XCTAssertEqual(expected, result)
+    let result = C64Converter.convert(nil)
+    XCTAssertGreaterThan(result.count, 0)
   }
 
   func testC64ConverionWithRegularString() {
@@ -72,11 +68,6 @@ class C64ConversionTests: XCTestCase {
     
     let result = C64Converter.convert(stringToConvert)
     XCTAssertEqual(expected, result)
-  }
-
-  func testC64ConversionForEmptyString() {
-    let result = C64Converter.convert("")
-    XCTAssertGreaterThan(result.count, 0)
   }
 }
 
