@@ -11,17 +11,13 @@ import XCTest
 class C64ConversionTests: XCTestCase {
     
   func testC64ConverionWithEmptyString() {
-    let stringToConvert = ""
-    let expected = ""
-    let result = C64Converter.convert(stringToConvert)
-    XCTAssertEqual(expected, result)
+    let result = C64Converter.convert("")
+    XCTAssertGreaterThan(result.count, 0)
   }
     
   func testC64ConverionWithNilString() {
-    let stringToConvert: String? = nil
-    let expected = ""
-    let result = C64Converter.convert(stringToConvert)
-    XCTAssertEqual(expected, result)
+    let result = C64Converter.convert(nil)
+    XCTAssertGreaterThan(result.count, 0)
   }
 
   func testC64ConverionWithRegularString() {
@@ -38,7 +34,7 @@ class C64ConversionTests: XCTestCase {
     for i in 0..<books.count {
       let stringToConvert = books[i]
       let expected = converted[i]
-        let result = C64Converter.convert(stringToConvert)
+      let result = C64Converter.convert(stringToConvert)
       XCTAssertEqual(expected, result)
     }
   }
@@ -73,6 +69,5 @@ class C64ConversionTests: XCTestCase {
     let result = C64Converter.convert(stringToConvert)
     XCTAssertEqual(expected, result)
   }
-
 }
 

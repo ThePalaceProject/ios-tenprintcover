@@ -195,7 +195,8 @@ float ofMap(float value, float inputMin, float inputMax, float outputMin, float 
 	shapeThickness = baseThickness * self.viewScale;
 	for (i=0; i<gridCount; i++) {
 		for (j=0; j<gridCount; j++) {
-			char character = [c64Title characterAtIndex:(item%c64Title.length)];
+      // c64Title is guaranteed to have length > 0, so the modulus here is safe
+			char character = [c64Title characterAtIndex:(item % c64Title.length)];
 			[self drawShape:character xPos:offset+artworkStartX+(j*gridSize) yPos:offset+artworkStartY+(i*gridSize) size:gridSize];
 			item++;
 		}
