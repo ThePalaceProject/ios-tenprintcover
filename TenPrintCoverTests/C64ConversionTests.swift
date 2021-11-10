@@ -29,7 +29,7 @@ class C64ConversionTests: XCTestCase {
     
   func testC64ConverionWithAccentedString() {
     let books = ["Cien años de soledad", "El amor en los tiempos del cólera"]
-    let converted = ["Cien aqos de soledad", "El amor en los tiempos del cwlera"]
+    let converted = ["Cien avos de soledad", "El amor en los tiempos del cblera"]
     
     for i in 0..<books.count {
       let stringToConvert = books[i]
@@ -51,7 +51,7 @@ class C64ConversionTests: XCTestCase {
       return
     }
     
-    let expected = " 1r4 jJkKlL:zZxXcC.V0123456789:67890.ABCDEFGHIJKLMNOPQRSTUVWXYZDfFgGhabcdefghijklmnopqrstuvwxyz56789SY5NMB13674.082sWEQytimM2PKn9wTqJccI9UuN8Y3bEQqJRw9GL js0h9RSdFgpPCJa:Sx56. WetTioOpPaAdDfFgGhHjkKlL:zZxXcCvVm erRYuUT"
+    let expected = "JJmlJjJkKlL:zZxXcC.V0123456789:67890.ABCDEFGHIJKLMNOPQRSTUVWXYZDfFgGhabcdefghijklmnopqrstuvwxyz56789W4LhjgJK:zlcXZkwBNV317HjkPYGxb2vUcc8x65hZ4KFNVvKMbcHzJk7nf6uDfGhaAoHF7UNL:cCBn12790. qQeErRtTyYuiIoOpPaAsSdDfHCnmM456T"
     let result = C64Converter.convert(stringToConvert)
     XCTAssertEqual(expected, result)
   }
@@ -64,7 +64,7 @@ class C64ConversionTests: XCTestCase {
     
     let stringToConvert = "ʰʱʲʳʴʵʶʷʸʹʺʻʼʽʾʿˀˁ˂˃˄˅ˆˇˈˉˊˋˌˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣˤ˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲˳˴˵˶˷˸˹˺˻˼˽˾˿ͰͱͲͳʹ͵Ͷͷͺͻͼͽ;Ϳ·΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϏ·ϐϑϒϓϔϕϖϗϘϙϚϛϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳϴϵ϶ϷϸϹϺϻϼϽϾϿЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎӏӐӑӒӓӔӕӖӗӘәӚӛӜӝӞӟӠӡӢӣӤӥӦӧӨөӪӫӬӭӮӯӰӱӲӳӴӵӶӷӸӹӺӻӼӽӾӿ–—―‗‘’‚‛“”„†‡•…‰′″‹›‼‾⁄⁊▀▁▂▃▄▅▆▇█▉▊▋▌▍▎▏▐░▒▓▔▕▖▗▘▙▚▛▜▝▞▟■□▢▣▤▥▦▧▨▩▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◈◉◊○◌◍◎●◐◑◒◓◔◕◖◗◘◙◚◛◜◝◞◟◠◡◢◣◤◥◦◧◨◩◪◫◬◭◮◯◰◱◲◳◴◵◶◷◸◹◺◻◼◽◾◿"
     
-    let expected = "qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUipqrsTuvwz56769RAsSRDfFGHjJkKlL:zZxXcCvVbBnNM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHRjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUi qQwWeErRtTyYuUiIoOpPaAsSdDfFgGh jJkKlL:zZxXcC.V0123456789:67890.ABCDEFGHIJKLMNOPQRSTUVWXYZDfFgGhabcdefghijklmnopqrstuvwxyz56789OpPFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUipPasSdDfFgG jJL0239:79DJOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUi"
+    let expected = "L:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmkKlLVzZxCvVb6nM234M6780 qQwWeErRtTyYuUiIoOpaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. MqQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbB4567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcaAsdDfFgGhHJkKznmM679.eyCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890. qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZx"
     
     let result = C64Converter.convert(stringToConvert)
     XCTAssertEqual(expected, result)

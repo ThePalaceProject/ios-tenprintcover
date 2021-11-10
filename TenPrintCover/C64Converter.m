@@ -11,8 +11,10 @@
 
 @implementation C64Converter
 
-+ (NSString *)convert:(NSString *)value
-{
+/// Converts a string to a string that uses only the ASCII 64 letter set.
+/// @param value String to convert.
++ (NSString *)convert:(NSString *)value {
+
   NSString *c64Letters = @" qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM1234567890.";
   
   if (value.length == 0) {
@@ -20,15 +22,14 @@
     unichar character = [c64Letters characterAtIndex:index];
     value = [NSString stringWithCharacters:&character length:1];
   }
-  
-  NSUInteger len = value.length;
+
+  // returns a string with all the c64-letter available in the title or a random set if none
+  int i, len = (int)value.length;
   NSMutableString *result = [NSMutableString stringWithCapacity:len];
-  char letter;
-  for (int i=0; i<len; i++) {
+  unichar letter;
+  for (i=0; i<len; i++) {
     letter = [value characterAtIndex:i];
-    NSRange range = [self indexOf:letter inString:c64Letters];
-    //        NSLog(@"letter: %c num: %d range: %d", letter, (int)letter, range.length);
-    if (range.length == 0) {
+    if (![self isCharacter:letter inString:c64Letters]) {
       int anIndex = (int)(letter % c64Letters.length);
       letter = [c64Letters characterAtIndex:anIndex];
     }
@@ -37,23 +38,14 @@
   return [NSString stringWithString:result];
 }
 
-+ (NSRange) indexOf:(char) searchChar inString:(NSString *)string {
-  NSRange searchRange;
-  searchRange.location=(unsigned int)searchChar;
-  searchRange.length=1;
-  NSCharacterSet *set = [NSCharacterSet characterSetWithRange:searchRange];
-  
-  // NSCharacterSet:characterSetWithRange by default is never supposed to
-  // return nil. However, on iOS 14.5 beta, it is returning nil when the char
-  // is non ASCII (e.g. accented character), causing the app to crash.
-  if (set) {
-    return [string rangeOfCharacterFromSet:set];
-  }
-  
-  // This is only triggered when passed a non ASCII character e.g. ñ, ó
-  searchRange.location = NSNotFound;
-  searchRange.length = 0;
-  return searchRange;
+/// Looks for a unicode charachter in string.
+/// @param searchChar Unicode character.
+/// @param string String to search in.
++ (BOOL) isCharacter:(unichar)searchChar inString:(NSString *)string {
+  NSRange searchCharRange = NSMakeRange(searchChar, 1);
+  NSCharacterSet *set = [NSCharacterSet characterSetWithRange:searchCharRange];
+  NSRange result = [string rangeOfCharacterFromSet:set];
+  return result.location != NSNotFound;
 }
 
 @end
